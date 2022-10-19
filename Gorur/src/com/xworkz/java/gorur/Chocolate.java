@@ -6,58 +6,58 @@ public class Chocolate {
 	public int price;
 	public String Buyfrom;
 	public String benefits;
-	
+
 	public String[] color;
-	public String[] CompanyName;
-	public String[]  material;
-	public int[] custamercareNumber;
+	public String[] companyName;
+	public String[] materials;
 	public float[] rawmaterial;
-	public String[] ManagerName;
-	
-	
-	public Chocolate ( String name, boolean taste, int price,String Buyfrom,String benefits,String[] color,String[] custamerNumbers,String[]  rawmaterials,
-			int[] custamercareNumbers,float[] rawmaterials2)
-	{
-		this.name=name;
-		this.taste=taste;
-		this.price=price;
-		this.Buyfrom=Buyfrom;
-		this.benefits=benefits;
-		this.color=color;
-		this.material=rawmaterials;
-		
+	public String[] managerName;
+	public int[] custamercareNumber;
 	
 
+
+	public Chocolate(String name, boolean taste, int price, String Buyfrom, String benefits, String[] color,
+			String[] companyName, String[] materials,  float[] rawmaterial, String[] managerName, int[] custamercareNumber) {
+		this.name = name;
+		this.taste = taste;
+		this.price = price;
+		this.Buyfrom = Buyfrom;
+		this.benefits = benefits;
+		this.color = color;
+		this.rawmaterial = rawmaterial;
+		this.companyName = companyName;
+		this.custamercareNumber = custamercareNumber;
+		this.managerName = managerName;
+
 	}
-public void display() {
-	System.out.println("Name :"+this.name);
-	System.out.println(this.taste);
-	System.out.println(this.Buyfrom);
-	System.out.println(this.benefits);
-	System.out.println(this.price);
-	
-	for (int i = 0; i < CompanyName.length; i++) {
-		String string =CompanyName[i];
-		System.out.println(string);
-		
+
+	public void display() {
+		System.out.println("Name :" + this.name);
+		System.out.println(this.taste);
+		System.out.println(this.Buyfrom);
+		System.out.println(this.benefits);
+		System.out.println(this.price);
+
+		for (int i = 0; i < companyName.length; i++) {
+			String string = companyName[i];
+			System.out.println(string);
+
+		}
+		for (int i = 0; i < color.length; i++) {
+			String string = color[i];
+			System.out.println(string);
+		}
+		for (int i = 0; i < rawmaterial.length; i++) {
+			float f = rawmaterial[i];
+			System.out.println(f);
+		}
+
+		for (int i = 0; i < managerName.length; i++) {
+			System.out.println(managerName[i]);
+		}
+		for (int i = 0; i < custamercareNumber.length; i++) {
+			i = custamercareNumber[i];
+			
+		}
 	}
-	for (int i = 0; i < color.length; i++) {
-		String string = color[i];
-		System.out.println(string);
-	}
-	for (int i = 0; i < material.length; i++) {
-		String string = material[i];
-		System.out.println(string);
-	}
-	
-	
-	for (int i = 0; i < rawmaterial.length; i++) {
-		System.out.println(rawmaterial[i]);
-		
-	}
-	for (int i = 0; i < ManagerName.length; i++) {
-		System.out.println(ManagerName[i]);	
-		
-	}
-}
 }

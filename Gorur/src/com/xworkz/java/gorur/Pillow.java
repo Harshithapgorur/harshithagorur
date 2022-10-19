@@ -35,7 +35,7 @@ public class Pillow {
 				System.out.println(this.color[i]);
 			}
 			
-			System.out.println(System.lineSeparator() + "Compartments Names: ");	
+			System.out.println(System.lineSeparator() + " Metireals");	
 			for (int i = 0; i < this.metireal.length; i++) {
 				System.out.println(this.metireal[i]);
 			}
