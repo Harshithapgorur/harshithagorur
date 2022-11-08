@@ -5,7 +5,8 @@ public class Location {
 	public String street;
 	public State state;
 	public City city;
-	public Country country;
+	public Country country=null;
+
 	public Location(int number, String street, State state, City city, Country country) {
 		super();
 		this.number = number;
@@ -14,13 +15,13 @@ public class Location {
 		this.city = city;
 		this.country = country;
 	}
+
 	public void Showoff() {
-	System.out.println(this.number);
-	System.out.println(this.street);
-	System.out.println(this.state);
-	System.out.println(this.city);
-	System.out.println(this.country);
+		System.out.println(this.number);
+		System.out.println(this.street);
+		System.out.println(this.state);
+		System.out.println(this.city);
+		System.out.println(this.country);
 
+	}
 }
-}
-
