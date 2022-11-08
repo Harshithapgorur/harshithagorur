@@ -1,10 +1,16 @@
 package com.xworkz.inheritance.subclass;
 
-public class WeddingShoot {
+import com.xworkz.inheritance.PreWeddingShoot;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class WeddingShoot extends PreWeddingShoot {
+
+	public WeddingShoot(String location, double cost, int members) {
+		super(location, cost, members);
+		
+	}
+		PreWeddingShoot photo = new PreWeddingShoot("Madikeri",15000,20);
+
 
 	}
 
-}
+
