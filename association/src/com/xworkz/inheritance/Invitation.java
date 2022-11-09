@@ -12,6 +12,7 @@ public class Invitation {
 		this.shape = shape;
 		this.price = price;
 		this.color = color;
+		System.out.println("const : Invitation.....");
 	}
 	
 
