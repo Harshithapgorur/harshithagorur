@@ -47,7 +47,7 @@ public class Paint {
 		if (other instanceof Paint) {
 			System.out.println("other in paint, can check the properties");
 			Paint casted = (Paint) other;
-			if (this.brand.equals(casted.brand)) {
+			if (this.brand.equals(casted.brand)&& this.name.equals(casted.name)) {
 				System.out.println("Barand is same");
 				return true;
 			}

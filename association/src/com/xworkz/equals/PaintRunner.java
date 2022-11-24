@@ -19,6 +19,10 @@ public class PaintRunner {
 
 		Paint paint2 = new Paint("Nippon", "pink", "Nippon4567", "2023March", "2021April", "trynot", "colorpaint", 4400,
 				"nice", false);
+		System.out.println(paint2);
+		boolean ref=paint2.equals(paint2);
+		System.out.println(ref);
+
 
 	}
 
