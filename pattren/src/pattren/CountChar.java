@@ -6,6 +6,7 @@ public class CountChar {
 		String string="The best of both worlds";
 		int count =0;
 		for(int i=0;i<string.length();i++) {
+			if(string.charAt(i)==' ')// this code for count the space
 		
 				count++;
 			

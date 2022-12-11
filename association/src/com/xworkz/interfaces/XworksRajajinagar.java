@@ -17,6 +17,10 @@ public class XworksRajajinagar  {
 		object2.placement();
 		object2.training();
 		TestingInstitute object3=(TestingInstitute) new XworksRajajinagar();
+		
+		
+		
+		
 	XworksRajajinagar object4=new XworksRajajinagar();
 	
 }
