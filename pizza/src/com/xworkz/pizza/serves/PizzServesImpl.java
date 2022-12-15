@@ -5,8 +5,7 @@ import com.xworkz.pizza.dto.PizzaDTO;
 
 public class PizzServesImpl  implements PizzaServes{
 
-	public int VEG,NONVEG;
-
+ 
 	@Override
 	public boolean validation(PizzaDTO dto) {
 	System.out.println("Running the validation DTO"+dto);
@@ -24,7 +23,7 @@ public class PizzServesImpl  implements PizzaServes{
 	boolean validType=false;
 	boolean validFlavour=false;
 	
-	if(name!=null&&name.length()>=4&&name.length()<20) {
+	if(name!=null&&name.length()>=4&&name.length()<=20) {
 	
 		
 		System.out.println("valid pizza name"+name);
@@ -41,7 +40,7 @@ public class PizzServesImpl  implements PizzaServes{
 	}else {
 		System.err.println("Invalid price"+price);
 	}
-	if(company!=null&&company.length()<=4&&company.length()>=20) {
+	if(company!=null&&company.length()>=4&&company.length()<=20) {
 		System.out.println("valid company"+company);
 		validCompany=true;
 	}
@@ -57,15 +56,15 @@ public class PizzServesImpl  implements PizzaServes{
 	else {
 		System.err.println("Invalid size"+size);
 	}
-	if(flavour!=null&&flavour.length()<=3&&flavour.length()>=20) {
+	if(flavour!=null&&flavour.length()>=3&&flavour.length()<=20) {
 		System.out.println("valid flavour"+flavour);
 		validFlavour=true;
 	}
 	else {
 		System.err.println("Invalid flavour"+flavour);
 	}
-	if(type!=null&&type.length()<=VEG&&type.length()<=NONVEG) {
-		System.out.println("Valid type"+type);
+	if(type!=null&&type=="VEG"||type=="NONVEG") {
+		System.out.println("Valid type :"+type);
 		validType=true;
 		
 	}

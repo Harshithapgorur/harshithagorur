@@ -14,7 +14,7 @@ public class PizzaRunner {
 		PizzaDTO pizzadto=new PizzaDTO();
 		pizzadto.setName("conechees");
 		pizzadto.setCompany("dominos");
-		pizzadto.setPrice(27);
+		pizzadto.setPrice(270);
 		pizzadto.setCheese(false);
 		pizzadto.setSize(PizzaSize.SMALL);
 		pizzadto.setFlavour("spicy");
