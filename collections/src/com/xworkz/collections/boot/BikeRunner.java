@@ -24,7 +24,7 @@ public class BikeRunner {
 	String bike16="tvsapacheRR";
 	String bike17="royalenfieldhimalayan";
 	String bike18="S1";
-	Collection<String>collection=new TreeSet();
+	Collection<String>collection=new TreeSet<String>();
 	collection.add(bike18);
 	collection.add(bike17);
 	collection.add(bike16);
