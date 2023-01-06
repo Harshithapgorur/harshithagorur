@@ -30,9 +30,6 @@ public class WeaponRunner {
 		System.out.println("weaponmane");
 		application.stream().sorted().collect(Collectors.toList()).forEach(e->System.out.println(e));
 		System.out.println(System.lineSeparator());
-		System.out.println("madeOn is sorted by ascending");
-		Comparator<WeaponDTO> comparator=(p1,p2)->String.compare(p1.getMadeBy(), p2.getMadeOn());
-		application.stream().sorted(comparator).forEach(e->System.out.println(e));
 		
 		
 		System.out.println(System.lineSeparator());
@@ -41,6 +38,41 @@ public class WeaponRunner {
 		.stream()
 		.sorted((p1,p2)->p2.getName().compareTo(p1.getMadeBy()))
 		.forEach(e->System.out.println(e));
+		System.out.println("Print all made by and made on");
+		application.stream()
+				.forEach(e -> System.out.println("Weapon made by " + e.getMadeBy() + " and made on " + e.getMadeOn()));
+
+		System.out.println("Print all weapon by desc order");
+		application.stream().sorted((e1, e2) -> e2.getName().compareTo(e1.getName()))
+				.forEach(e -> System.out.println(e.getName()));
+
+		System.out.println("Print all weapon made_By by asce order");
+		application.stream().sorted((e1, e2) -> e1.getMadeBy().compareTo(e2.getMadeBy()))
+				.forEach(e -> System.out.println(e.getMadeBy()));
+
+		System.out.println("Print all weapon made_On by asce order");
+		application.stream().sorted((e1, e2) -> e1.getMadeOn().compareTo(e2.getMadeOn()))
+				.forEach(e -> System.out.println(e.getMadeOn()));
+
+		System.out.println("Print all weapon price by asce order");
+		application.stream().sorted((e1, e2) -> e1.getType().compareTo(e2.getType()))
+				.forEach(e -> System.out.println(e.getType()));
+
+		System.out.println("Print all weapon price by desc order");
+		application.stream().sorted((e1, e2) -> e2.getType().compareTo(e1.getType()))
+				.forEach(e -> System.out.println(e.getType()));
+
+		System.out.println("Print all weapon name and madeOn by asc order");
+		application.stream().sorted((e1, e2) -> e1.getName().compareTo(e2.getName()))
+				.sorted((e1, e2) -> e1.getMadeOn().compareTo(e2.getMadeOn())).forEach(
+						e -> System.out.println("Sorted name: " + e.getName() + " and sorted madeOn:" + e.getMadeOn()));
+
+		System.out.println("Print all weapon type, madeBy, name in dese order");
+		application.stream().sorted((e1, e2) -> e1.getType().compareTo(e1.getType()))
+				.sorted((e1, e2) -> e2.getMadeBy().compareTo(e1.getMadeBy()))
+				.sorted((e1, e2) -> e2.getName().compareTo(e1.getName()))
+				.forEach(e -> System.out.println("Sorted Type: " + e.getType() + " and sorted madeBy:"
+						+ e.getMadeBy() + "and Name is: " + e.getName()));
 
 	}
 
