@@ -3,15 +3,14 @@ package com.xworkz.crud.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class AbstractAuditDTO implements Serializable {
-
+public abstract class AbstractWarDTO implements Serializable {
 	private String createdBy;
 	private LocalDateTime createdDate;
 	private String updateBy;
 	private LocalDateTime updateDate;
 
-	public AbstractAuditDTO() {
-		System.out.println("calling the no-argument const of AbstractAuditDTO");
+	public AbstractWarDTO() {
+		System.out.println("calling the defult cont");
 	}
 
 	public String getCreatedBy() {

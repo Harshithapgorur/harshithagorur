@@ -1,0 +1,37 @@
+public class JavaTast {
+
+	public static void main(String[] args) {
+		List<Integer>applicaton =new ArrayList<Integer>();
+		applicaton.add(45);
+		applicaton.add(333);
+		applicaton.add(76);
+		applicaton.add(29);
+		applicaton.add(23);
+		applicaton.add(900);
+		applicaton.add(474);
+		applicaton.add(654);
+		applicaton.add(29);
+		applicaton.add(454);
+		System.out.println("min:"+applicaton.max(applicaton));
+		System.out.println("min:"+applicaton.min(applicaton));
+
+	}
+
+}
+
+3.Converting a subclass type into a superclass type is called Generalization ,
+Converting parent class into child classis called specialized.
+4.a) We have the classes as final we can not inherited by any other classes.
+c) Delegation can be an alternative to inheritance.
+5)Linked,ArrayList,LinkedHashset,link,set.
+6)What is the difference between ArrayList and LinkedList?
+ArrayList internally uses a dynamic array to store its elements,ArrayList is slow as array
+ manipulation is slower
+LinkedList uses Doubly Linked List to store its elements,
+LinkedList is faster being node based as not much bit shifting required.
+7)Iterator:- can traverse the elements in a collection only in forward direction.
+ListIterator :-can traverse the elements in a collection in forward as well as the backwards direction.
+8)Covariant return type refers to return type of an overriding method.
+9)memory leak is a type of resource leak that occurs 
+when a computer program incorrectly manages memory allocations 
+10)methodoverloding anf methodoverriding.

@@ -1,6 +1,7 @@
 package com.xworkz.crud.repository;
 
 import com.xworkz.crud.dto.IplDTO;
+import com.xworkz.crud.exception.ArraylengthiIsFull;
 
 public class IplRepositoryIml implements IplRepository {
 	private IplDTO[] iplDtos= new IplDTO[10];
@@ -8,17 +9,17 @@ public class IplRepositoryIml implements IplRepository {
 	
 
 	@Override
-	public boolean create(IplDTO dto) {
+	public boolean create(IplDTO dto) throws ArraylengthiIsFull {
 		System.out.println("running the IplDTO"+dto);
-		if(this.catIndex >= this.iplDtos.length) {
+		if(this.catIndex >= this.iplDtos.length) {			
 		System.out.println("size exceeded");
-		return false;
+		throw new ArraylengthiIsFull();
+		
 	}
 	this.iplDtos[this.catIndex]= dto;
 	System.out.println("don"+dto+"index"+ this.catIndex);
 	this.catIndex++;
-	return true;
 	
-	
+	return false;
 	}
 }
