@@ -47,8 +47,8 @@ public class SpringConfiguration {
 	@Bean("boolean")
 	public Boolean bedsprid() {
 		System.out.println("calling the bedsprid in the bean");
-		Boolean boo =new Boolean(null);
-		return boo;
+		
+		return true;
 	}
 	@Bean("boolean")
 	public Boolean eco() {
@@ -68,36 +68,7 @@ public class SpringConfiguration {
 		Boolean boo =new Boolean(null);
 		return boo;
 	}
-	@Bean("float")
-	public Float gun() {
-		System.out.println("calling  float");
-		Float foo =new Float(null);
-		return foo;
-	}
-	@Bean("float")
-	public Float eclipse() {
-		System.out.println("calling the eclipse in the float");
-		Float foo =new Float(null);
-		return foo;
-	}
-	@Bean("float")
-	public Float more() {
-		System.out.println("calling the more in the float");
-		Float foo =new Float(null);
-		return foo;
-	}
-	@Bean("float")
-	public Float plus() {
-		System.out.println("calling the plus in the float");
-		Float foo =new Float(null);
-		return foo;
-	}
-	@Bean("float")
-	public Float bun() {
-		System.out.println("calling the bun in the float");
-		Float foo =new Float(null);
-		return foo;
-	}
+	
 	
 	
 }
