@@ -17,8 +17,18 @@ public class Season {
 		this.startingMonth = startingMonth;
 	}
 
-	public Season() {
-		System.out.println("calling the no-agrument cont");
+	
+	
+	public String getDuration() {
+		return duration;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getStartingMonth() {
+		return startingMonth;
 	}
 
 }

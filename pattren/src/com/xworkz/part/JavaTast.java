@@ -19,7 +19,7 @@ public class JavaTast {
 		applicaton.add(654);
 		applicaton.add(29);
 		applicaton.add(454);
-		System.out.println("min:"+applicaton.max));
+		System.out.println("min:"+applicaton.min(applicaton)));
 
 	}
 

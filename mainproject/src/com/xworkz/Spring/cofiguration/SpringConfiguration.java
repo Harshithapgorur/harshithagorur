@@ -42,19 +42,18 @@ System.out.println("calling the no-argument cont");
 	public Actor age() {
 		System.out.println("Registering another country in spring");
 		Actor age=new Actor();
+		age.setAge(34);
+		age.setLang("kannada");
+		age.setName("Rahshith shetty");
 		return age;
 }
 	@Bean
 	public Season duration() {
 		System.out.println("Registering another country in spring");
-		Season duration=new Season();
+		Season duration=new Season("Winter", "five", "December");
 		return duration;
 }
-	@Bean
-	public Season month() {
-		System.out.println("Registering another country in spring");
-		Season month=new Season();
-		return month;
+	
 }
-}
+
 
