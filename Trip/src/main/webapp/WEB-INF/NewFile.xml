@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="8005" shutdown="SHUTDOWN">
+ --><Server port="9090" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -66,7 +66,7 @@
     <Connector executor="tomcatThreadPool"
                port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443" />
+               redirectPort="9090" />
     -->
     <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443
          This connector uses the NIO implementation. The default
@@ -108,8 +108,8 @@
     <!--
     <Connector protocol="AJP/1.3"
                address="::1"
-               port="8009"
-               redirectPort="8443" />
+               port="9090"
+               redirectPort="9090" />
     -->
 
     <!-- An Engine represents the entry point (within Catalina) that processes
@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Trip" path="/Trip" reloadable="true" source="org.eclipse.jst.jee.server:Trip"/></Host>
+      <Context docBase="homepage" path="/homepage" reloadable="true" source="org.eclipse.jst.jee.server:homepage"/></Host>
     </Engine>
   </Service>
 </Server>
