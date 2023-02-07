@@ -1,8 +1,7 @@
 package comm.xworkzz.casino;
 
-import javax.enterprise.inject.Model;
-
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,10 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 		@PostMapping
 		public String onBeach(BeachDTO beachDto, Model model) {
 			System.out.println("running onBeach"+beachDto);
-			((BeachDTO) model).addAttribute("name", beachDto.getName());
-			((BeachDTO) model).addAttribute("location", beachDto.getLocation());
+			model.addAttribute("name",beachDto.getName());
+			model.addAttribute("location",beachDto.getLocation());
+			model.addAttribute("clean",beachDto.isClean());
+			model.addAttribute("games",beachDto.isGames());
 			
-			return "casinoindex.jsp";
+			
+			
+			return "";
 		}
 	}
 
