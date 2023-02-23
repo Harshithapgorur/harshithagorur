@@ -45,5 +45,4 @@ public class ValentineServiceImpl implements ValentineService {
 		return Collections.emptySet();
 	}
 	}
-
 }

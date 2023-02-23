@@ -1,4 +1,4 @@
-package com.xworkz.cm.configaration;
+package com.xworkz.aeroplane.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,20 +8,22 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan("com.xworkz.cm")
-public class CMConfigaration {
-	public CMConfigaration() {
-		System.out.println("created "+this.getClass().getSimpleName());
+@ComponentScan("com.xworkz.aeroplane")
+public class AreoConfiguration {
+	public AreoConfiguration() {
+		System.out.println("created:" + getClass().getSimpleName());
 	}
-	
+
 	@Bean
-	public ViewResolver viewResolver() {
-	System.out.println("registering custom view resolver");
-	return new InternalResourceViewResolver("/",".jsp");
+	public ViewResolver resolver() {
+		System.out.println("Running ViewResolver in config");
+		return new InternalResourceViewResolver("/", ".jsp");
+
 	}
+
+	@Bean
 	public LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean() {
-		System.out.println("running the LocalContainerEntityManagerFactoryBean");
-		return  new LocalContainerEntityManagerFactoryBean();
+		System.out.println("LocalContainerEntityManagerFactoryBean");
+		return new LocalContainerEntityManagerFactoryBean();
 	}
-	
 }
